@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hadeel 3D</title>
+
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+  </script>
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    .scene {
+      width: 100%;
+      height: 800px;
+      background-image: url("./had.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    model-viewer {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      --poster-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scene">
+    <model-viewer
+      src="./hadeel.glb"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      exposure="1"
+      environment-image="neutral"
+      interaction-prompt="none">
+    </model-viewer>
+  </div>
+</body>
+</html>
